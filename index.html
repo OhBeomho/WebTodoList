@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Todo List</title>
+	</head>
+	<body>
+		<div class="menu-bar">
+			<a href="" class="brand">TODO List</a>
+			<div class="menus">
+				<div id="create">Create TODO</div>
+				<div id="settings">Settings</div>
+			</div>
+		</div>
+		<div class="view">
+			<select id="filter">
+				<option value="all">All todos</option>
+				<option value="active">Active todos</option>
+				<option value="complete">Completed todos</option>
+				<option value="fail">Failed todos</option>
+			</select>
+			<ul class="todo-list">
+			</ul>
+		</div>
+		<div class="modal-background create">
+			<div class="modal create">
+				<button class="close-modal">X</button>
+				<h1>Create TODO</h1>
+				<input type="text" class="title" placeholder="TODO Name" /><br />
+				Starts at <input type="date" class="start-date" placeholder="Start date" /> ~ Ends at
+				<input type="date" class="end-date" placeholder="End date" /><br />
+				<textarea
+					class="content"
+					cols="70"
+					rows="10"
+					style="resize: none"
+					placeholder="About todo (Optional)"
+				></textarea
+				><br />
+				<button class="ok-close-modal">OK</button>
+			</div>
+		</div>
+		<div class="modal-background edit">
+			<div class="modal edit">
+				<button class="close-modal">X</button>
+				<h1>Edit TODO</h1>
+				<input type="text" class="title" placeholder="TODO Name" /><br />
+				Starts at <input type="date" class="start-date" placeholder="Start date" /> ~ Ends at
+				<input type="date" class="end-date" placeholder="End date" /><br />
+				<textarea
+					class="content"
+					cols="70"
+					rows="10"
+					style="resize: none"
+					placeholder="About todo (Optional)"
+				></textarea
+				><br />
+				<button class="ok-close-modal">OK</button>
+			</div>
+		</div>
+		<div class="modal-background settings">
+			<div class="modal settings">
+				<button class="close-modal">X</button>
+				<h1>Settings</h1>
+				<div>
+					Dark mode: <input type="checkbox" id="darkmode" />
+				</div>
+				<div>
+					Font: <input type="text" id="font" />
+				</div>
+			</div>
+		</div>
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>
