@@ -8,7 +8,9 @@ function save(newTodoList) {
 
 function getActiveTodos() {
 	const todoList = load();
-	return todoList.filter((todo) => !todo.complete && new Date(todo.endDate).getTime() >= new Date(new Date().toDateString()).getTime());
+	return todoList.filter(
+		(todo) => !todo.complete && new Date(todo.endDate).getTime() >= new Date(new Date().toDateString()).getTime()
+	);
 }
 
 function getCompletedTodos() {
@@ -18,7 +20,9 @@ function getCompletedTodos() {
 
 function getFailedTodos() {
 	const todoList = load();
-	return todoList.filter((todo) => !todo.complete && new Date(todo.endDate).getTime() < new Date(new Date().toDateString()).getTime());
+	return todoList.filter(
+		(todo) => !todo.complete && new Date(todo.endDate).getTime() < new Date(new Date().toDateString()).getTime()
+	);
 }
 
 const filters = [getActiveTodos, getCompletedTodos, getFailedTodos];
