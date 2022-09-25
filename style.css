@@ -111,6 +111,12 @@ body {
 	font-weight: bold;
 }
 
+.todo > .date.inactive::after {
+	content: ' INACTIVE';
+	color: gray;
+	font-weight: bold;
+}
+
 .todo > .buttons button {
 	margin-right: 3px;
 }
