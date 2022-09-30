@@ -19,7 +19,7 @@ class Todo {
 			),
 		() =>
 			this.#todo_list.filter(
-				(todo) => !todo.complete && new Date(todo.startDate) > new Date()
+				(todo) => !todo.complete && new Date(todo.startDate) > new Date(new Date().toDateString())
 			)
 	]
 
