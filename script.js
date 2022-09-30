@@ -80,10 +80,12 @@ function loadTodos() {
 
 	for (let todo of filteredTodoList) {
 		let className
-		if (todo.complete) className = 'complete'
-		else if (filters[0]().some((e) => e.id === todo.id)) className = 'active'
-		else if (filters[2]().some((e) => e.id === todo.id)) className = 'fail'
-		else if (filters[3]().some((e) => e.id === todo.id)) className = 'inactive'
+		if (filterName === 'all') {
+			if (todo.complete) className = 'complete'
+			else if (filters[0]().some((e) => e.id === todo.id)) className = 'active'
+			else if (filters[2]().some((e) => e.id === todo.id)) className = 'fail'
+			else if (filters[3]().some((e) => e.id === todo.id)) className = 'inactive'
+		} else className = filterName
 
 		const todoElement = document.createElement('li')
 		todoElement.className = 'todo'
